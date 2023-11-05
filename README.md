@@ -21,16 +21,42 @@
 ---------------------------------------------------------------------------
 ### Some Pages In My Website
 - Login
+
 ![2](https://github.com/AbdelrahmanOsama123/RunGroops_Social_Media_Website/blob/main/Advanced_Web_Application/wwwroot/Images/Login.png)
 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------
+
 - Home 
+
 ![1](https://github.com/AbdelrahmanOsama123/RunGroops_Social_Media_Website/blob/main/Advanced_Web_Application/wwwroot/Images/Home.png)
 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------
+
 - Find Runners
+
 ![3](https://github.com/AbdelrahmanOsama123/RunGroops_Social_Media_Website/blob/main/Advanced_Web_Application/wwwroot/Images/FindRunners.png)
 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------
+
 - Find Clubs
+
 ![4](https://github.com/AbdelrahmanOsama123/RunGroops_Social_Media_Website/blob/main/Advanced_Web_Application/wwwroot/Images/FindClubs.png)
 
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------
+
 - Register
+
 ![5](https://github.com/AbdelrahmanOsama123/RunGroops_Social_Media_Website/blob/main/Advanced_Web_Application/wwwroot/Images/Register.png)
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------
+
+- Dashboard
+
+![6](https://github.com/AbdelrahmanOsama123/RunGroops_Social_Media_Website/blob/main/Advanced_Web_Application/wwwroot/Images/Dashboard.png)
