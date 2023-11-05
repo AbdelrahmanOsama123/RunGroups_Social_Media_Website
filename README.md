@@ -17,9 +17,10 @@
 ```
 - Register for a [Cloudinary Account](https://cloudinary.com/users/register/free) (%100 free) and add Cloudname, ApiKey, and Api secret to appsettings.json.
 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 - Login
-<kbd>![image](https://drive.google.com/file/d/1wieLMYidEx1HEONJcGcMkj7HowJromw_/view)</kbd>
+![2](https://github.com/AbdelrahmanOsama123/Gaming_Store_Ecommerce_Website/blob/main/FrontEnd/assets/images/login.png)
 
 - Home 
-<kbd>![image](https://drive.google.com/file/d/1ehiVPKK4zbU_O3ds9Y9JCklYuOCliiDk/view)</kbd>
+![1](https://github.com/AbdelrahmanOsama123/Gaming_Store_Ecommerce_Website/blob/main/FrontEnd/assets/images/home.png)
