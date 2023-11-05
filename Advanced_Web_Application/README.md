@@ -1,6 +1,6 @@
-# RunGroops_SocialMedia_Website
+# RunGroops_Social_Media_Website
 
-### Rungroops is an online platform for runners. This platform will help you to find clubs, schedule events, and meet other runners in your area. 
+### Rungroops is an online Socail Media platform for runners. This platform will help you to find clubs, schedule events, and meet other runners in your area. 
 
 ## Getting Started
 
@@ -18,9 +18,19 @@
 - Register for a [Cloudinary Account](https://cloudinary.com/users/register/free) (%100 free) and add Cloudname, ApiKey, and Api secret to appsettings.json.
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
+---------------------------------------------------------------------------
+### Some Pages In My Website
 - Login
-![2](https://github.com/AbdelrahmanOsama123/Gaming_Store_Ecommerce_Website/blob/main/FrontEnd/assets/images/login.png)
+![2](https://github.com/AbdelrahmanOsama123/RunGroops_Social_Media_Website/blob/main/Advanced_Web_Application/wwwroot/Images/Login.png)
 
 - Home 
-![1](https://github.com/AbdelrahmanOsama123/Gaming_Store_Ecommerce_Website/blob/main/FrontEnd/assets/images/home.png)
+![1](https://github.com/AbdelrahmanOsama123/RunGroops_Social_Media_Website/blob/main/Advanced_Web_Application/wwwroot/Images/Home.png)
+
+- Find Runners
+![3](https://github.com/AbdelrahmanOsama123/RunGroops_Social_Media_Website/blob/main/Advanced_Web_Application/wwwroot/Images/FindRunners.png)
+
+- Find Clubs
+![4](https://github.com/AbdelrahmanOsama123/RunGroops_Social_Media_Website/blob/main/Advanced_Web_Application/wwwroot/Images/FindClubs.png)
+
+- Register
+![5](https://github.com/AbdelrahmanOsama123/RunGroops_Social_Media_Website/blob/main/Advanced_Web_Application/wwwroot/Images/Register.png)
