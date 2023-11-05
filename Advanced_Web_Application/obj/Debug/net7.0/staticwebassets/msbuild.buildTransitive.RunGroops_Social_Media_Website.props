@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\RunGroops_Social_Media_Website.props" />
+</Project>

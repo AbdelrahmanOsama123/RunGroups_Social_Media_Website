@@ -1,0 +1,75 @@
+﻿@model EditRaceViewModel
+@using Advanced_Web_Application.Data.Enum;
+@using Advanced_Web_Application.ViewModels;
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<div class="container p-4 m-4">
+    <div class="col-md-8">
+       
+        <form method="post" asp-action="Edit" enctype="multipart/form-data">
+
+            <div class="row mb-3">
+                <h2 class="mb-1">Edit Race</h2>
+                <hr />
+            </div>
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <div class="form-group mb-2">
+                <label asp-for="Title" class="control-label p-1"></label>
+                <input asp-for="Title" class="form-control" placeholder="Enter Title" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+
+
+            <div class="form-group mb-2">
+                <label asp-for="Description" class="control-label p-1" placeholder="Enter Description"></label>
+                <input asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-2">
+                <label asp-for="Address.Street" class="control-label p-1" placeholder="Enter Street"></label>
+                <input asp-for="Address.Street" class="form-control">
+                <span asp-validation-for="Address.Street" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-2">
+                <label asp-for="Address.City" class="control-label p-1" placeholder="Enter City"></label>
+                <input asp-for="Address.City" class="form-control">
+                <span asp-validation-for="Address.City" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-2">
+                <label asp-for="Address.State" class="control-label p-1" placeholder="Enter State"></label>
+                <input asp-for="Address.State" class="form-control">
+                <span asp-validation-for="Address.State" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-2">
+                <label asp-for="RaceCatagory" class="control-label p-1"></label>
+                <select asp-for="RaceCatagory" class="form-control" asp-items="@Html.GetEnumSelectList<RaceCatagory>()">
+                    <option>--Select--</option>
+                </select>
+                <span asp-validation-for="RaceCatagory" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-2">
+                <label asp-for="Image" class="control-label p-1"></label>
+                <input asp-for="Image" type="file" class="form-control" placeholder="Upload Image" />
+                <span asp-validation-for="Image" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-4">
+                <button type="submit" class="btn btn-primary p-1" style="width:150px">Edit</button>
+                <a class="btn btn-secondary" asp-controller="Race" asp-action="Index" style="width:150px">Back to List</a>
+            </div>
+
+        </form>
+    </div>
+</div>
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

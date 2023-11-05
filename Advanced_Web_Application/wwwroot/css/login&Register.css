@@ -1,0 +1,25 @@
+﻿body {
+    background-image: url('/Images/istockphoto-926852960-612x612.jpg');
+    background-size: cover; /* Adjust as needed */
+    background-repeat: no-repeat; /* Adjust as needed */
+    margin-bottom: 60px;
+}
+
+label {
+    font-size: 30px;
+}
+
+input {
+    height: 50px;
+}
+
+input::placeholder {
+    font-size: 20px;
+}
+
+span {
+    font-size: 20px;
+}
+
+
+

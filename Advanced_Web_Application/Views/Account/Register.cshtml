@@ -1,0 +1,74 @@
+﻿@using Advanced_Web_Application.ViewModels;
+@model RegisterViewModel
+
+@{
+    <link rel="stylesheet" href="~/css/login&Register.css" />
+}
+@{
+    if (ViewData["LoginCSS"] != null && (bool)ViewData["LoginCSS"])
+    {
+        <link rel="stylesheet" href="~/css/login.css" />
+    }
+}
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="col-md-6 offset-4">
+    <p>
+        <h2 class="text-success display-5">Create New Account</h2>
+    </p>
+</div>
+<div class="col-md-6 offset-3">
+    @if (TempData["Error"] != null)
+    {
+        <div class="col-md-12 alert alert-danger">
+            <span><b>Sorry</b> - @TempData["Error"]</span>
+        </div>
+    }
+</div>
+
+<div class="row">
+    <div class="col-md-6 offset-3">
+        <form method="post" asp-action="Register">
+            <div class="form-group my-3">
+                <label asp-for="FirstName" class="label-control text-success"></label>
+                <input asp-for="FirstName" class="form-control" placeholder="Enter First Name">
+                <span asp-validation-for="FirstName" class="text-danger"></span>
+            </div>
+            <div class="form-group my-3">
+                <label asp-for="LastName" class="label-control text-success"></label>
+                <input asp-for="LastName" class="form-control" placeholder="Enter Last Name">
+                <span asp-validation-for="LastName" class="text-danger"></span>
+            </div>
+            <div class="form-group my-3">
+                <label asp-for="Username" class="label-control text-success"></label>
+                <input asp-for="Username" class="form-control" placeholder="Enter Username">
+                <span asp-validation-for="Username" class="text-danger"></span>
+            </div>
+            <div class="form-group my-3">
+                <label asp-for="EmailAddress" class="label-control text-success"></label>
+                <input asp-for="EmailAddress" class="form-control" placeholder="Enter Email Address">
+                <span asp-validation-for="EmailAddress" class="text-danger"></span>
+            </div>
+            <div class="form-group my-3">
+                <label asp-for="Password" class="label-control text-success"></label>
+                <input asp-for="Password" class="form-control" placeholder="Enter Password">
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="form-group my-4">
+                <label asp-for="confirmPassword" class="label-control text-success"></label>
+                <input asp-for="confirmPassword" class="form-control" placeholder="Enter Confirm Password">
+                <span asp-validation-for="confirmPassword" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-5">
+                <button type="submit" class="w-25 btn btn-success float right" style="color:white;height: 50px;font-size:25px;border-radius: 25px;">Register</button>
+                <a class="w-25 btn btn-secondary float right" style="color:white;height: 50px;font-size:25px;border-radius: 25px;" asp-controller="Account" asp-action="Register">Cancel</a>
+            </div>
+            <div class="form-group mb-4">
+                <p class="w-100 text-center text-light" style="font-size:25px">&mdash; Or you  have  already  account ?&mdash;</p>
+                <a asp-controller="Account" asp-action="Login" class="w-75 btn btn-success text-center btn-rounded" style="color:white;height: 50px;font-size:25px;border-radius: 25px;margin-left:70px">Sign In</a>
+            </div>
+        </form>
+    </div>
+</div>

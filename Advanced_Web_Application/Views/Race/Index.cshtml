@@ -1,0 +1,58 @@
+﻿@model IEnumerable<Race>
+@{
+    ViewData["Title"] = "Races";
+}
+
+<div class="container">
+    <div class="row pt-4">
+        <div class="col-6">
+            <h1 class="text-primary mb-2">List of Races</h1>
+        </div>
+        @if (User.Identity.IsAuthenticated && User.IsInRole("admin"))
+        {
+            <div class="col-6 text-end">
+                <a style="font-size:24px" asp-controller="Club" asp-action="Create" class="btn btn-primary">
+                    <i class="bi bi-plus-circle"></i>&nbsp; Create New Race
+                </a>
+            </div>
+        }
+
+    </div>
+    <br><br>
+</div>
+
+<div class="album py-5 bg-body-tertiary">
+    <div class="container">
+
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            @foreach (var Race in Model)
+            {
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <img class="card-img-top" src="@Race.Image" height="225" alt="Card Image not found">
+                        <div class="card-body">
+                            <h1 class="card-text text-primary">@Race.Title</h1>
+                            <p class="card-text text-dark h6">@Race.Description</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    @if (User.Identity.IsAuthenticated && User.IsInRole("admin"))
+                                    {
+                                        <a class="btn btn-sm btn-outline-primary" style="width:80px;font-size:large"
+                                           asp-controller="Race" asp-action="Edit" asp-route-id="@Race.Id">Edit</a>
+                                        <a class="btn btn-sm btn-outline-primary" style="width:80px;font-size:large"
+                                           asp-controller="Race" asp-action="Delete" asp-route-id="@Race.Id">Delete</a>
+                                    }
+                                    <a class="btn btn-sm btn-outline-primary" style="width:80px;font-size:large"
+                                       asp-controller="Race" asp-action="Detail" asp-route-id="@Race.Id">View</a>
+
+                                </div>
+                                <small class="text-body-secondary">@Race.RaceCatagory</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+
+        </div>
+    </div>
+</div>

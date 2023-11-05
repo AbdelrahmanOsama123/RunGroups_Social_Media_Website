@@ -1,0 +1,59 @@
+﻿@using Advanced_Web_Application.ViewModels;
+@model HomeViewModel
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<section class="py-1 text-center container">
+    <div class="row py-lg-5">
+        <div class="col-lg-6 col-md-8 mx-auto">
+            <h1 class="fw-light display-3 text-primary">Running Clubs</h1>
+            <h4 class="text-secondary mb-3">This is Amazing Webstie about Clubs and Races places </h4>
+            <h4 class="text-secondary mb-4">Our goal is to keep you entertained</h4>
+        </div>
+    </div>
+</section>
+
+<div class="album py-5 bg-body-tertiary">
+    <div class="container">
+        <div class="row">
+            @if (Model.clubs == null || Model.clubs.Count() == 0)
+            {
+                <h1 class="fw-light">
+                    There is no Running Clubs in Your Area @Model.City , @Model.State <br>
+                    <form asp-controller="Account" asp-action="Logout">
+                        <button type="submit" class="btn-outline-danger">Login here and Create one!</button>
+                    </form>
+                </h1>
+            }
+            else{
+                 <h1 class="fw-light text-primary">Running Clubs near @Model.City , @Model.State</h1>
+                    @foreach (var club in Model.clubs)
+                    {
+                        <div class="col-md-4">
+                            <div class="card mb-4 shadow-sm">
+                                <img class="card-img-top" src="@club.Image" width="100%" height="225" alt="Card Image not found">
+                                <div class="card-body">
+                                <h1 class="card-text text-primary">@club.Title</h1>
+                                <p class="card-text text-warning" style="font-size:30px">@club.Description</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                        <a class="btn btn-sm btn-outline-primary" style="width:80px;font-size:large" asp-controller="Club" asp-action="Detail" asp-route-id="@club.Id">View</a>
+                                            @if (User.Identity.IsAuthenticated && User.IsInRole("admin"))
+                                            {
+                                                <a class="btn btn-sm btn-outline-secondary" style="width:80px;font-size:large" asp-controller="Club" asp-action="Edit" asp-route-id="@club.Id">Edit</a>
+                                            }
+                                        </div>
+                                        <small class="text-body-secondary">9 mins</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    }
+                }
+            
+        </div>
+    </div>
+</div>

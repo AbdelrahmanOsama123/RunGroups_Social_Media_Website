@@ -1,0 +1,66 @@
+﻿@using Advanced_Web_Application.ViewModels;
+@model EditUserViewModel
+@{
+    ViewData["Title"] = "EditUserProfile";
+}
+
+<div class="container p-4 m-4">
+    <div class="col-md-8">
+        <form method="post" asp-action="EditUserProfile" enctype="multipart/form-data">
+            <input type="hidden" asp-for="Id" id="Id" name="Id"/>
+            <div class="row mb-3">
+                <h2 class="mb-1">Edit Profile</h2>
+                <hr />
+            </div>
+
+            <div class="form-group mb-2">
+                <label asp-for="FirstName" class="control-label p-1"></label>
+                <input asp-for="FirstName" class="form-control" placeholder="Enter First Name" />
+                <span asp-validation-for="FirstName" class="text-danger"></span>
+            </div>
+
+
+            <div class="form-group mb-2">
+                <label asp-for="LastName" class="control-label p-1" placeholder="Enter Last Name"></label>
+                <input asp-for="LastName" class="form-control" />
+                <span asp-validation-for="LastName" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-2">
+                <label asp-for="Street" class="control-label p-1" placeholder="Enter Your Street"></label>
+                <input asp-for="Street" class="form-control">
+                <span asp-validation-for="Street" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-2">
+                <label asp-for="City" class="control-label p-1" placeholder="Enter Your City"></label>
+                <input asp-for="City" class="form-control">
+                <span asp-validation-for="City" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-2">
+                <label asp-for="State" class="control-label p-1" placeholder="Enter Your State"></label>
+                <input asp-for="State" class="form-control">
+                <span asp-validation-for="State" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-2">
+                <label asp-for="Image" class="control-label p-1"></label>
+                <input asp-for="Image" type="file" class="form-control" placeholder="Upload Image" />
+                <span asp-validation-for="Image" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-4">
+                <button type="submit" class="btn btn-primary p-1" style="width:150px">Edit</button>
+                <a class="btn btn-secondary" asp-controller="Dashboard" asp-action="Index" style="width:150px">Go to Dashboard</a>
+            </div>
+
+        </form>
+    </div>
+</div>
+<div>
+    <a asp-action="Index">Go to Dashboard</a>
+</div>
+
+
+
